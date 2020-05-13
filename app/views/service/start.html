@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Request an authentication code to be sent to a home address
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {% if serviceName %}
+          {{ serviceName }}
+        {% endif %}
+      </h1>
+      <p class="govuk-body-l">This service is for ...
+      </p>
+      <h2 class="govuk-heading-s">Companies who can/can't use it:</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>list</li>
+      </ul>
+
+      <h2 class="govuk-heading-s">Directors who can/can't use it:</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>list</li>
+        <li>list</li>
+      </ul>
+
+      {{ govukInsetText({
+        text: "You cannot ...."
+      }) }}
+
+      <p class="govuk-body">It takes about 10 minutes to request an authentication code.</p>
+      <a href="/sign-in" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Guidance
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list
+    govuk-!-font-size-16">
+            <li>
+              <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" target="_blank">
+                Company authentication codes for online filing
+                <span class="govuk-visually-hidden">Link opens in new tab/window</span>
+              </a>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </div>
+{% endblock %}
