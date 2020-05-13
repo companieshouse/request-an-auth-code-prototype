@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Confirm this is the correct officer
+{% endblock %}
+{% block main %}
+
+  <div class="govuk-width-container">
+    {% include "includes/phase-banner.html" %}
+    {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      <form action="confirmation" method="GET">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">Confirm officer</h1>
+
+            {{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: "Emma"
+      }
+    },
+    {
+      key: {
+        text: "Role"
+      },
+      value: {
+        text: "Director"
+      }
+    },
+    {
+      key: {
+        text: "Date of birth"
+      },
+      value: {
+        text: "March 1981"
+      }
+    },
+    {
+      key: {
+        text: "Appointed on"
+      },
+      value: {
+        text: "3 January 2019"
+      }
+    },
+    {
+      key: {
+        text: "Nationality"
+      },
+      value: {
+        text: 'British'
+      }
+    },
+    {
+      key: {
+        text: "Country of residence"
+      },
+      value: {
+        text: 'United Kingdom'
+      }
+    },
+    {
+      key: {
+        text: "Occupation"
+      },
+      value: {
+        text: 'Director'
+      }
+    }
+  ]
+}) }}
+
+            {{ govukButton({
+                text: "Continue"
+              }) }}
+          </form>
+
+        </div>
+        <!--govuk-grid-row-->
+      </div>
+      <!--govuk-grid-column-two-thirds-->
+
+    </main>
+  </div>
+  <!---govuk-width-container-->
+
+{% endblock %}

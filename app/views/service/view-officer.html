@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Select an officer
+{% endblock %}
+{% block main %}
+
+  <div class="govuk-width-container">
+    {% include "includes/phase-banner.html" %}
+    {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <form action="confirm-officer" method="post">
+
+            {{ govukRadios({
+              idPrefix: "where-do-you-live",
+              name: "where-do-you-live",
+              fieldset: {
+                legend: {
+                  text: "Who needs the auth code?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--l"
+                }
+              },
+              items: [
+                {
+                  value: "england",
+                  text: "Emma"
+                },
+                {
+                  value: "scotland",
+                  text: "Beccy"
+                },
+                {
+                  value: "wales",
+                  text: "Mike"
+                },
+                {
+                  value: "northern-ireland",
+                  text: "James"
+                }
+              ]
+            }) }}
+
+            {{ govukButton({
+        text: "Continue"
+      }) }}
+          </form>
+
+        </div>
+        <!--govuk-grid-row-->
+      </div>
+      <!--govuk-grid-column-two-thirds-->
+
+    </main>
+  </div>
+  <!---govuk-width-container-->
+
+{% endblock %}
