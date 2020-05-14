@@ -17,23 +17,24 @@
           {{ serviceName }}
         {% endif %}
       </h1>
-      <p class="govuk-body-l">This service is for ...
+      <p class="govuk-body-l">This new service gives users the option to have their authentication code posted to an officer’s Usual Residential Address, rather than the company's Registered Office.
       </p>
-      <h2 class="govuk-heading-s">Companies who can/can't use it:</h2>
+      <h2 class="govuk-heading-s">Companies who cannot use this service:</h2>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>list</li>
+        <li>Insolvency practitioners</li>
+        <p>
+          (Alternative route into CH for setting auth code, which is expected to be via email from a valid Insolvency Practitioner email address)</p>
       </ul>
 
-      <h2 class="govuk-heading-s">Directors who can/can't use it:</h2>
-
+      <h2 class="govuk-heading-s">Officers who cannot use this service:</h2>
       <ul class="govuk-list govuk-list--bullet">
-        <li>list</li>
-        <li>list</li>
+        <li>Disqualified officers</li>
+        <li>Bankrupt officers</li>
       </ul>
 
       {{ govukInsetText({
-        text: "You cannot ...."
+        text: "You will need your company number"
       }) }}
 
       <p class="govuk-body">It takes about 10 minutes to request an authentication code.</p>

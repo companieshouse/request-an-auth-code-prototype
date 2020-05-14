@@ -80,6 +80,19 @@
   ]
 }) }}
 
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                      I confirm that I would like the authentication code sent to Emma's Usual Residential Address
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
             {{ govukButton({
                 text: "Continue"
               }) }}
