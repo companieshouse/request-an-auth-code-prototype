@@ -17,29 +17,40 @@
           {{ serviceName }}
         {% endif %}
       </h1>
-      <p class="govuk-body-l">This new service gives users the option to have their authentication code posted to an officer’s Usual Residential Address, rather than the company's Registered Office.
+      <p class="govuk-body-l">Use this service to ask us to post a company's authentication code to an officer's home address instead of the registered office.
       </p>
-      <h2 class="govuk-heading-s">Companies who cannot use this service:</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Insolvency practitioners</li>
-        <p>
-          (Alternative route into CH for setting auth code, which is expected to be via email from a valid Insolvency Practitioner email address)</p>
-      </ul>
-
-      <h2 class="govuk-heading-s">Officers who cannot use this service:</h2>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Disqualified officers</li>
-        <li>Bankrupt officers</li>
-      </ul>
+      <p class="govuk-body">You should check with any agents who act on behalf of the company to see if they already have the authentication code.</p>
 
       {{ govukInsetText({
-        text: "You will need your company number"
-      }) }}
+              text: "This interim service has been created in response to the coronavirus (COVID-19) outbreak."
+            }) }}
+            <h2 class="govuk-heading-s">You'll need:</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>the company number</li>
+              <li>to sign in to or create a Companies House account, which is separate to your WebFiling account</li>
+              <p>      </ul>
+
+                <h2 class="govuk-heading-s">You cannot use this service if:</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>you are an insolvency practitioner acting on behalf of a company (alternative process - email from a valid address)</li>
+        <li>the officer is disqualified</li>
+        <li>the officer is bankrupt</li>
+        <p>      </ul>
+
+
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{{ govukWarningText({
+  text: "You should only use this service if the officer has kept their home address details up to date in our records.",
+  iconFallbackText: "Warning"
+}) }}
+
 
       <p class="govuk-body">It takes about 10 minutes to request an authentication code.</p>
       <a href="sign-in" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
     </div>
+
 
     <div class="govuk-grid-column-one-third">
       <aside class="app-related-items" role="complementary">
