@@ -17,32 +17,28 @@
       <div class="govuk-panel govuk-panel--confirmation">
         <h1 class="govuk-panel__title">Application submitted</h1>
         <div class="govuk-panel__body">
-          Your reference number<br>
-          <strong>N4OBD-U2SGP</strong>
+          We will post the authentication code to the officer's home address.
         </div>
       </div>
       <p class="govuk-body">
-        Make a note of your reference number or
-        <a href="javascript:void(0)">print this page for your records.</a>
-        You need your reference number if you get in touch with us about your application.</p>
-
-      <h2 class="govuk-heading-m">What happens next</h2>
-      <p class="govuk-body">We will start to review your application.</p>
-
       <h2 class="govuk-heading-m">How long it takes</h2>
+      <p class="govuk-body">The officer should receive the authentication code at their home address within 5 working days. </p>
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
-      <p class="govuk-body">Applications take at least 30 days to process.
+{{ govukWarningText({
+  text: "Due to the impact of coronavirus (COVID-19) it may take longer than usual for post to be delivered.",
+  iconFallbackText: "Warning"
+}) }}
 
-      </p>
+<h2 class="govuk-heading-m">How to contact us</h2>
+<p class="govuk-body">Email us at <a href="email">enquiries@companieshouse.gov.uk</a>.</P>
+  <p class="govuk-body">Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.</p>
 
-      <h2 class="govuk-heading-m">What do you want to do next?</h2>
+<h2 class="govuk-heading-m">What do you want to do next?</h2>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="/applying-as">start a new application</a>
-        </li>
-        <li>
-          <a href="https://www.gov.uk/government/publications/apply-to-remove-your-home-address-from-the-public-register-sr01" target="_blank">ask for your home address to be removed from documents</a>
+          <a href="/print">print this page for your records</a>
         </li>
         <li>
           <a href="/sign-out">sign out</a>
@@ -50,10 +46,7 @@
       </ul>
 
       <p class="govuk-body govuk-!-margin-top-7">
-        This is a new service. Help us improve it by
-        <a href="feedback">
-          <span class="govuk-visually-hidden">This is a new service. Help us improve it by
-          </span>completing our quick survey</a>.
+        <a href="feedback">Help us to improve this new service by completing our quick survey</a>.
       </p>
 
     </div>
