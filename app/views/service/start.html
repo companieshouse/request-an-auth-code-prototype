@@ -37,23 +37,14 @@
         <li>the officer is on the secure register</li>
         <p>      </ul>
 
-        <h2 class="govuk-heading-s">You cannot use this service if:</h2>
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>you are an insolvency practitioner acting on behalf of a company (alternative process - email from a valid address)</li>
-          <li>the officer is disqualified</li>
-          <li>the officer is bankrupt</li>
-          <li>the officer is on the secure register</li>
-          <p></ul>
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
 {{ govukWarningText({
   text: "You should only use this service if the officer has kept their home address details up-to-date in our records.",
   iconFallbackText: "Warning"
 }) }}
 
-          <p class="govuk-body">It takes about 10 minutes to request an authentication code.</p>
-          <a href="sign-in" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
-        </div>
 
       <p class="govuk-body">It takes around 10 minutes to request an authentication code.</p>
       <a href="sign-in" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
@@ -68,14 +59,14 @@
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list
     govuk-!-font-size-16">
-                <li>
-                  <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" target="_blank">
-                    Company authentication codes for online filing
-                    <span class="govuk-visually-hidden">Link opens in new tab/window</span>
-                  </a>
-              </ul>
-            </nav>
-          </aside>
-        </div>
-      </div>
-    {% endblock %}
+            <li>
+              <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" target="_blank">
+                Company authentication codes for online filing
+                <span class="govuk-visually-hidden">Link opens in new tab/window</span>
+              </a>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </div>
+{% endblock %}

@@ -15,40 +15,48 @@
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Request submitted</h1>
-        <div class="govuk-panel__body">We will post an authentication code to the officers’ usual residential address.</div>
+        <h1 class="govuk-panel__title">Application submitted</h1>
+        <div class="govuk-panel__body">
+          Your reference number<br>
+          <strong>N4OBD-U2SGP</strong>
+        </div>
       </div>
       <p class="govuk-body">
-        <h2 class="govuk-heading-m">How long it takes</h2>
+        Make a note of your reference number or
+        <a href="javascript:void(0)">print this page for your records.</a>
+        You need your reference number if you get in touch with us about your application.</p>
 
-        <p class="govuk-body">Please allow 5 working days for the letter to arrive.
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk-body">We will start to review your application.</p>
 
-        </p>
+      <h2 class="govuk-heading-m">How long it takes</h2>
 
-        {{ govukWarningText({
-  text: "Due to the impact of coronavirus (COVID-19) it may take longer for mail to arrive.",
-  iconFallbackText: "Warning"
-}) }}
+      <p class="govuk-body">Applications take at least 30 days to process.
 
-        <h2 class="govuk-heading-m">What do you want to do next?</h2>
+      </p>
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>
-            <a href="/applying-as">print this page for your records</a>
-          </li>
-          <li>
-            <a href="/sign-out">sign out</a>
-          </li>
-        </ul>
+      <h2 class="govuk-heading-m">What do you want to do next?</h2>
 
-        <p class="govuk-body govuk-!-margin-top-7">
-          This is a new service. Help us improve it by
-          <a href="feedback">
-            <span class="govuk-visually-hidden">This is a new service. Help us improve it by
-            </span>completing our quick survey</a>.
-        </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/applying-as">start a new application</a>
+        </li>
+        <li>
+          <a href="https://www.gov.uk/government/publications/apply-to-remove-your-home-address-from-the-public-register-sr01" target="_blank">ask for your home address to be removed from documents</a>
+        </li>
+        <li>
+          <a href="/sign-out">sign out</a>
+        </li>
+      </ul>
 
-      </div>
+      <p class="govuk-body govuk-!-margin-top-7">
+        This is a new service. Help us improve it by
+        <a href="feedback">
+          <span class="govuk-visually-hidden">This is a new service. Help us improve it by
+          </span>completing our quick survey</a>.
+      </p>
+
     </div>
+  </div>
 
-  {% endblock %}
+{% endblock %}
