@@ -31,7 +31,7 @@
                 <h2 class="govuk-heading-s">You cannot use this service if:</h2>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>you are an insolvency practitioner acting on a company's behalf (alternative process - email from a valid address)</li>
+        <li>the company is dissolved</li>
         <li>the officer is disqualified</li>
         <li>the officer is bankrupt</li>
         <li>the officer is on the secure register</li>
@@ -41,7 +41,7 @@
       {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
 {{ govukWarningText({
-  text: "You should only use this service if the officer has kept their home address details up-to-date in our records.",
+  text: "You should only use this service if the officer has previously given us up-to-date details of their home address.",
   iconFallbackText: "Warning"
 }) }}
 
