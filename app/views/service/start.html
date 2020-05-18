@@ -17,36 +17,35 @@
           {{ serviceName }}
         {% endif %}
       </h1>
-      <p class="govuk-body-l">Use this service to get a company's authentication code posted to an officer's home address instead of a registered office.
+      <p class="govuk-body-l">Use this service to ask us to post a company's authentication code to an officer's home address instead of the registered office.
       </p>
       {{ govukInsetText({
-              text: "You should check with company agents to see if they already have the authentication code."
+              text: "You should check with any agents who act on behalf of the company to see if they already have the authentication code."
             }) }}
             <h2 class="govuk-heading-s">You'll need:</h2>
             <ul class="govuk-list govuk-list--bullet">
               <li>the company number</li>
-              <li>to sign in to or create a Companies House account, which is different to a WebFiling account</li>
+              <li>to sign in to or create a Companies House account, which is separate to a WebFiling account</li>
               <p>      </ul>
 
                 <h2 class="govuk-heading-s">You cannot use this service if:</h2>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>you are an insolvency practitioner acting on a company's behalf (detail separate process?)</li>
+        <li>you are an insolvency practitioner acting on behalf of a company (alternative process - email from a valid address)</li>
         <li>the officer is disqualified</li>
         <li>the officer is bankrupt</li>
-        <li>the officer is on the secure register</li>
         <p>      </ul>
 
 
       {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
 {{ govukWarningText({
-  text: "You should only use this service if the officer has kept their home address details up-to-date in our records.",
+  text: "You should only use this service if the officer has kept their home address details up to date in our records.",
   iconFallbackText: "Warning"
 }) }}
 
 
-      <p class="govuk-body">It takes around 10 minutes to request an authentication code.</p>
+      <p class="govuk-body">It takes about 10 minutes to request an authentication code.</p>
       <a href="sign-in" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
     </div>
 
