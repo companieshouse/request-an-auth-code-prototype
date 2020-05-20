@@ -29,8 +29,9 @@
                 }
               },
   hint: {
-    text: "Only select the officer if you know that Companies House has an up to date  residential address for them."
+    text: "You should only select an officer if you know they have given us their most recent home address."
   },
+
               items: [
                 {
                   value: "emma",
@@ -82,7 +83,12 @@
                 }
               ]
             }) }}
+            {% from "govuk/components/details/macro.njk" import govukDetails %}
 
+            {{ govukDetails({
+              summaryText: "Why can I not see the home address?",
+              html: "We do not make details of an officer's home address publicly available. <br><br>We will post the authorisation code to the most recent home address that the officer has given us."
+            }) }}
             {{ govukButton({
         text: "Continue"
       }) }}
