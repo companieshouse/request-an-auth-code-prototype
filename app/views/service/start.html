@@ -17,13 +17,14 @@
           {{ serviceName }}
         {% endif %}
       </h1>
-      <p class="govuk-body-l">Use this service to get a company's authentication code posted to an active officer's UK home address instead of the registered office.
+      <p class="govuk-body-l">Use this service to get a company's authentication code posted to an active officer's UK home address instead of the registered office
       </p>
       {{ govukInsetText({
               text: "You should check with company agents to see if they already have the authentication code."
             }) }}
-            <p class="govuk-body">For now, only UK limited companies and limited liability partnerships (LLPs) can use this service.
-            <h2 class="govuk-heading-s">You'll need:</h2>
+            <p class="govuk-body">For now, only UK limited companies and limited liability partnerships (LLPs) can use this service.</P>
+
+<h2 class="govuk-heading-s">You'll need:</h2>
             <ul class="govuk-list govuk-list--bullet">
               <li>the company number</li>
               <li>to sign in to or create a Companies House account, which is different from a WebFiling account</li>
@@ -35,14 +36,18 @@
         <li>the company is dissolved</li>
         <li>the officer is on the secure register</li>
         <p>      </ul>
+
+
       {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
-{{ govukWarningText({
-text: "You should only use this service if you know the officer has given us their most recent home address. You cannot see or update the address in this service.",
-  iconFallbackText: "Warning"
-}) }}
 
-      <p class="govuk-body">It takes around 10 minutes to request an authentication code.</p>
+<p class="govuk-body">It takes 5 working days for an officer to receive an authentication code at their home address.</p>
+ <p class="govuk-body">Due to the impact of coronavirus (COVID-19), it may take longer than usual for post to be delivered.</p>
+ {{ govukWarningText({
+ text: "You should only use this service if you know the officer has given us their most recent home address. You cannot see or update the address in this service.",
+   iconFallbackText: "Warning"
+ }) }}
+
       <a href="sign-in" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
 </div>
 
