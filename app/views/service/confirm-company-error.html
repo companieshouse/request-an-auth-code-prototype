@@ -17,6 +17,15 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
+            {{ govukErrorSummary({
+              titleText: "You cannot use this service",
+              errorList: [
+                {
+                  text: "The company must have active officers",
+                  href: "#passport-issued-error"
+                }
+              ]
+            }) }}
             <h1 class="govuk-heading-l">Confirm this is the correct company</h1>
 
             {{ govukSummaryList({
@@ -51,6 +60,14 @@
       },
       value: {
         text: "26 June 1872"
+      }
+    },
+    {
+      key: {
+        text: "Company type"
+      },
+      value: {
+        text: 'Private limited company'
       }
     }
   ]
