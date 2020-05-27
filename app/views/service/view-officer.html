@@ -15,7 +15,7 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-
+          {% include 'includes/error.html' %}
           <form action="confirm-officer" method="post">
 
             {{ govukRadios({
@@ -26,7 +26,11 @@
                   text: "Which officer needs the authentication code?",
                   isPageHeading: true,
                   classes: "govuk-fieldset__legend--l"
-                }
+                },
+                attributes : {
+                  'data-required': "data-required",
+                  'data-error': "Select an officer"
+                  }
               },
   hint: {
     text: "You should only select an officer if you know they have given us their most recent home address."
@@ -34,56 +38,55 @@
 
               items: [
                 {
-                  value: "emma",
+                  value: "davis",
                   text: "DAVIS, Kathryn Ruth"
                 },
                 {
-                  value: "beccy",
+                  value: "dhut",
                   text: "DHUT, Rita"
                 },
                 {
-                  value: "mike",
+                  value: "ewing",
                   text: "EWING, Hilary Ann, Dr"
                 },
                 {
-                  value: "james",
+                  value: "gordon",
                   text: "GORDON, Maria Vladimirovna"
                 },
                 {
-                  value: "beccy",
+                  value: "harris",
                   text: "HARRIS, Richard John"
                 },
                 {
-                  value: "mike",
+                  value: "hockaday",
                   text: "HOCKADAY, Anne Mary"
                 },
                 {
-                  value: "james",
+                  value: "humphries",
                   text: "HUMPHRIES, Juliet Claire"
                 },
                 {
-                  value: "mike",
+                  value: "montgomery",
                   text: "MONTGOMERY, Fraser Stewarty"
                 },
                 {
-                  value: "james",
+                  value: "oliver",
                   text: "OLIVER, Peter Geoffrey"
                 },
                 {
-                  value: "mike",
+                  value: "ross",
                   text: "ROSS, Stuart"
                 },
                 {
-                  value: "james",
+                  value: "simons",
                   text: "SIMONS, Judith Ann, Professory"
                 },
                 {
-                  value: "james",
+                  value: "tuck",
                   text: "TUCK, Anne Victoria"
                 }
               ]
             }) }}
-            {% from "govuk/components/details/macro.njk" import govukDetails %}
 
             {{ govukDetails({
               summaryText: "Why can I not see the home address?",
