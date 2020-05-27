@@ -15,7 +15,7 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-
+          {% include 'includes/error.html' %}
           <form action="confirm-officer" method="post">
 
             {{ govukRadios({
@@ -26,7 +26,11 @@
                   text: "Which officer needs the authentication code?",
                   isPageHeading: true,
                   classes: "govuk-fieldset__legend--l"
-                }
+                },
+                attributes : {
+                  'data-required': "data-required",
+                  'data-error': "Select an officer"
+                  }
               },
   hint: {
     text: "You should only select an officer if you know they have given us their most recent home address."
