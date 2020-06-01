@@ -17,10 +17,7 @@
         <div class="govuk-grid-column-two-thirds">
           {% include 'includes/error.html' %}
           <form action="confirm-officer" method="post">
-            {{ govukDetails({
-              summaryText: "Why can I not see the home address?",
-              html: "We do not make details of a director's home address publicly available for security reasons. <br><br>We will post the authentication code to the most recent home address that the director has given us."
-            }) }}
+
             {{ govukRadios({
               idPrefix: "list-of-officers",
               name: "list-of-officers",
@@ -102,20 +99,24 @@
                 }
               ]
             }) }}
+            <div class="pagination">
+              <a class="govuk-link" href="#">Previous</a>
+              <a class="govuk-link" href="#">1</a>
+              <a class="govuk-link" href="#">
+                <span class="govuk-!-font-weight-bold">2</span></a>
 
+              <a class="govuk-link" href="#">3</a>
+              <a class="govuk-link" href="#">Next</a>
+            </div>
           </form>
-
+          {{ govukDetails({
+            summaryText: "Why can I not see the home address?",
+            html: "We do not make details of a director's home address publicly available for security reasons. <br><br>We will post the authentication code to the most recent home address that the director has given us."
+          }) }}
         </div>
         <!--govuk-grid-row-->
       </div>
       <!--govuk-grid-column-two-thirds-->
-      <div class="pagination">
-        <a class="govuk-link" href="#">
-          <span class="govuk-!-font-weight-bold">1</span></a>
-        <a class="govuk-link" href="#">2</a>
-        <a class="govuk-link" href="#">3</a>
-        <a class="govuk-link" href="#">Next</a>
-      </div>
 
       {{ govukButton({
     text: "Continue"
