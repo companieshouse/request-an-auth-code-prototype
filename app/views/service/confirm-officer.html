@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Confirm this is the correct director
+  Confirm this is the correct officer
 {% endblock %}
 {% block main %}
 
@@ -17,7 +17,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             {% include 'includes/error.html' %}
-            <h1 class="govuk-heading-l">Confirm this is the correct director</h1>
+            <h1 class="govuk-heading-l">Confirm this is the correct officer</h1>
 
             {{ govukSummaryList({
   rows: [
@@ -82,7 +82,7 @@
 }) }}
 
             <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" data-required="data-required" data-error="Confirm the director">
+              <fieldset class="govuk-fieldset" data-required="data-required" data-error="Confirm the officer">
                 <div class="govuk-checkboxes govuk-checkboxes--small">
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">

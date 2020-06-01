@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Select a director
+  Select an officer
 {% endblock %}
 {% block main %}
 
@@ -23,17 +23,17 @@
               name: "list-of-officers",
               fieldset: {
                 legend: {
-                  text: "Which director needs the authentication code?",
+                  text: "Which officer needs the authentication code?",
                   isPageHeading: true,
                   classes: "govuk-fieldset__legend--l"
                 },
                 attributes : {
                   'data-required': "data-required",
-                  'data-error': "Select the director who needs the authentication code"
+                  'data-error': "Select the officer who needs the authentication code"
                   }
               },
   hint: {
-    text: "You should only select a director if you know they have given us their most recent home address."
+    text: "You should only select an officer if you know they have given us their most recent home address."
   },
 
               items: [
@@ -111,7 +111,7 @@
           </form>
           {{ govukDetails({
             summaryText: "Why can I not see the home address?",
-            html: "We do not make details of a director's home address publicly available for security reasons. <br><br>We will post the authentication code to the most recent home address that the director has given us."
+            html: "We do not make details of an officer's home address publicly available for security reasons. <br><br>We will post the authentication code to the most recent home address that the officer has given us."
           }) }}
         </div>
         <!--govuk-grid-row-->
