@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  You cannot use this service
+{% endblock %}
+{% block main %}
+
+  <div class="govuk-width-container">
+    {% include "includes/phase-banner.html" %}
+    {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <form action="confirm-company" method="post">
+            <h1 class="govuk-heading-l">
+              You cannot use this service
+
+            </h1>
+
+            <h2 class="govuk-body">We cannot post an authentication code to an officer's home address because the company:</h2>
+
+            <ul class="govuk-list govuk-list--bullet">
+
+              <li>does not have any active officers</li>
+
+              <li>is not based in the UK</li>
+
+              <li>is a limited partnership (LP)</li>
+
+              <li>is no longer active (insolvent)</li>
+
+              <li>only has corporate officers</li>
+              <p></ul>
+
+              <p class="govuk-body">You are still able to
+                <a href="/webfiling">request an authorisation code to the company's registered office address in WebFiling</a>.<p></form>
+
+              </div>
+              <!--govuk-grid-row-->
+            </div>
+            <!--govuk-grid-column-two-thirds-->
+
+          </main>
+        </div>
+        <!---govuk-width-container-->
+
+      {% endblock %}
