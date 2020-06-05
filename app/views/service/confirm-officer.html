@@ -98,8 +98,9 @@
             html: "We do not make details of an officer's home address publicly available for security reasons. <br><br>We will post the authentication code to the most recent home address that the officer has given us."
            }) }}
             {{ govukButton({
-                text: "Confirm and submit"
-              }) }}
+   text: "Confirm and submit",
+   preventDoubleClick: true
+ }) }}
           </form>
 
         </div>
