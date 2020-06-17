@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% block pageTitle %}
+  Company authentication codes for online filing
+{% endblock %}
+
+{% block beforeContent %}{% endblock %}
+{% block content %}
+  <style>
+    a.govuk-header__link.govuk-header__link--service-name {
+      display: none;
+    }
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Guidance</span>
+      <h1 class="govuk-heading-l">Company authentication codes for online filing
+      </h1>
+      <p>
+        How to request and manage the authentication code you'll need to file company information online.</p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <p class="govuk-body-s">Published 18 May 2015
+        <br>
+        Last updated 15 June 2020<br>
+        From:
+        <a href="https://www.gov.uk/government/organisations/companies-house">Companies House</a>
+      </p>
+
+      <h2 class="govuk-body-s">Contents</h2>
+
+      <ul class="govuk-list govuk-list--bullet govuk-body-s">
+        <li>
+          <a href="#how-accessible">How to get your code</a>
+        </li>
+        <li>
+          <a href="#help-with-access">How to use your code</a>
+        </li>
+        <li>
+          <a href="#report-problems">Change or cancel your code</a>
+        </li>
+        <li>
+          <a href="#enforcement">Looking after your code</a>
+        </li>
+      </ul>
+
+      <p>The authentication code is a 6 digit alphanumeric code issued by us to each company. The code is used to authorise information filed online and is the equivalent of a company officer’s signature.</p>
+
+      <p>You'll need a code to file your information on our
+        <a href="https://ewf.companieshouse.gov.uk/">online service</a>
+        or using
+        <a href="https://www.gov.uk/company-filing-software">third party software</a>.
+      </p>
+
+      {{ govukInsetText({
+        html: "Do not wait until you’re due to file to <a href='https://ewf.companieshouse.gov.uk/' class='govuk-link'>request your code</a> and risk it being too late. Because of the high volumes of post, delivery could take longer than usual during busy periods.."
+      }) }}
+
+      <h2 class="govuk-heading-l" id="how-accessible">How to get your code</h2>
+      <p>You can request to have your code sent to your
+        <a href="#home">home address</a>
+        or your
+        <a href="#office">registered office address</a>.</p>
+
+      <h3 class="govuk-heading-m" id="home">Request an authentication code to be sent to a home address</h3>
+
+      <p>If you are unable to access your company's registered office address, you can
+        <a href="/service/start">request to have your authentication code sent to your home address instead.</a>
+      </p>
+      <p>This is a temporary service in response to the coronavirus (COVID-19) outbreak.</p>
+
+      <h3 class="govuk-heading-m" id="office">Request an authentication code to be sent to a registered office address</h3>
+      <div class="call-to-action" style="    margin: 2em 0;
+    background-color: #f3f2f1;
+    padding: 2em;">
+        <p>
+          <a rel="external" href="https://ewf.companieshouse.gov.uk/" class="govuk-link">Request your code now</a>. It’s sent by post to your company’s registered office and can take up to 5 days to arrive.</p>
+
+        <p>
+          <a rel="external" href="https://bit.ly/2ZBFM6z" class="govuk-link">Watch our video</a>
+          to see how easy it is to register and order your code.</p>
+      </div>
+
+      <p>If you're new to the service, you'll need to:</p>
+
+      <ol class="steps">
+        <li>
+          <p>
+            <a rel="external" href="https://ewf.companieshouse.gov.uk//runpage?page=webfilingRegister&amp;signUpPage.lang=en" class="govuk-link">Register your email address and password</a>.</p>
+        </li>
+        <li>
+          <p>Select ‘Request an authentication code’.</p>
+        </li>
+        <li>
+          <p>Enter your company registration number.</p>
+        </li>
+        <li>
+          <p>Select ‘Request code’.</p>
+        </li>
+      </ol>
+
+    </div>
+
+  </div>
+
+{% endblock %}
