@@ -17,32 +17,29 @@
           {{ serviceName }}
         {% endif %}
       </h1>
-      <p class="govuk-body-l">Use this service to get a company's authentication code posted to an active officer's home address instead of the registered office.
+      <p class="govuk-body-l">Use this service to get a company's authentication code posted to an active director's home address instead of the registered office.
       </p>
-
-      <p class="govuk-body">To reduce the risk of fraud, we only send authentication codes by post.
-      </p>
-
       <h2 class="govuk-heading-s">You'll need:</h2>
       <ul class="govuk-list govuk-list--bullet">
         <li>the company number</li>
         <li>to sign in to or create a Companies House account, which is different from a WebFiling account</li>
         <p></ul>
 
-        <h2 class="govuk-heading-s">You cannot use this service if the company:</h2>
+        <h2 class="govuk-heading-s">You cannot use this service if:</h2>
 
         <ul class="govuk-list govuk-list--bullet">
-          <li>has filed a document online in the last 30 days</li>
-          <li>is not based in the UK</li>
-          <li>is not a limited company or limited liability partnership (LLP)</li>
-          <li>is dissolved</li>
+          <li>the company is not based in the UK</li>
+          <li>the company is not a limited company or limited liability partnership (LLP)</li>
+          <li>the company is dissolved</li>
           <p></ul>
 
-          <h2 class="govuk-heading-m">How long delivery takes</h2>
-          <p class="govuk-body">It takes around 5 working days for an officer to receive an authentication code at their home address.</p>
+          {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+          <h2 class="govuk-heading-m">How long it takes</h2>
+          <p class="govuk-body">It takes around 5 working days for a director to receive an authentication code at their home address.</p>
           <p class="govuk-body">Due to the impact of coronavirus (COVID-19), it may take longer than usual for post to be delivered.</p>
           {{ govukWarningText({
- text: "You should only use this service if you know the officer has given us their most recent home address. For security reasons, you cannot see or update the address in this service.",
+ text: "You should only use this service if you know the director has given us their most recent home address. For security reasons, you cannot see or update the address in this service.",
    iconFallbackText: "Warning"
  }) }}
 
