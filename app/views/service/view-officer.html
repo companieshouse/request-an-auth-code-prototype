@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Select a director
+  Select an officer
 {% endblock %}
 {% block main %}
 
@@ -23,17 +23,17 @@
               name: "list-of-officers",
               fieldset: {
                 legend: {
-                  text: "Which director needs the authentication code?",
+                  text: "Which officer needs the authentication code?",
                   isPageHeading: true,
                   classes: "govuk-fieldset__legend--l"
                 },
                 attributes : {
                   'data-required': "data-required",
-                  'data-error': "Select the director who needs the authentication code"
+                  'data-error': "Select the officer who needs the authentication code"
                   }
               },
   hint: {
-    text: "You should only select a director if you know they have given us their most recent home address."
+    text: "You should only select an officer if you know they have given us their most recent home address."
   },
 
               items: [
@@ -50,48 +50,12 @@
                   text: "EWING, Hilary Ann, Dr"
                 },
                 {
-                  value: "gordon",
-                  text: "GORDON, Maria Vladimirovna"
-                },
-                {
                   value: "harris",
                   text: "HARRIS, Richard John"
-                },
-                {
-                  value: "hockaday",
-                  text: "HOCKADAY, Anne Mary"
-                },
-                {
-                  value: "humphries",
-                  text: "HUMPHRIES, Juliet Claire"
-                },
-                {
-                  value: "montgomery",
-                  text: "MONTGOMERY, Fraser Stewarty"
-                },
-                {
-                  value: "oliver",
-                  text: "OLIVER, Peter Geoffrey"
-                },
-                {
-                  value: "ross",
-                  text: "ROSS, Stuart"
-                },
-                {
-                  value: "simons",
-                  text: "SIMONS, Judith Ann, Professory"
-                },
-                {
-                  value: "tuck",
-                  text: "TUCK, Anne Victoria"
                 }
               ]
             }) }}
 
-            {{ govukDetails({
-              summaryText: "Why can I not see the home address?",
-              html: "We do not make details of a director's home address publicly available for security reasons. <br><br>We will post the authentication code to the most recent home address that the director has given us."
-            }) }}
             {{ govukButton({
         text: "Continue"
       }) }}

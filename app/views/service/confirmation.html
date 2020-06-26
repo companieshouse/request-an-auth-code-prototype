@@ -15,41 +15,50 @@
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation">
+
         <h1 class="govuk-panel__title">Request submitted</h1>
+        <div class="govuk-panel__body govuk-!-margin-bottom-6">on
+          <span id="day" class="govuk-!-font-weight-bold">12</span>
+          <span id="month" class="govuk-!-font-weight-bold">June</span>
+          <span id="year" class="govuk-!-font-weight-bold">2020</span>
+          at
+          <span id="lblTime" class="govuk-!-font-weight-bold">10:21am</span></div>
         <div class="govuk-panel__body">
-          We will post the authentication code to the director's home address.
+          We will post the authentication code to the officer's home address.
         </div>
       </div>
       <p class="govuk-body">
-      <h2 class="govuk-heading-m">How long it takes</h2>
-      <p class="govuk-body">It takes around 5 working days for an authentication code to be delivered to a director's home address.</p>
-      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+        <h2 class="govuk-heading-m">How long it takes</h2>
+        <p class="govuk-body">It takes around 5 working days for an authentication code to be delivered to an officer's home address.</p>
+        {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
-{{ govukWarningText({
+        {{ govukWarningText({
   text: "Due to the impact of coronavirus (COVID-19) it may take longer than usual for post to be delivered.",
   iconFallbackText: "Warning"
 }) }}
 
-<h2 class="govuk-heading-m">How to contact us</h2>
-<p class="govuk-body">If delivery of the letter is taking longer than you'd expect, email us at <a href="email">enquiries@companieshouse.gov.uk</a>.</P>
-  <p class="govuk-body">Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.</p>
+        <h2 class="govuk-heading-m">How to contact us</h2>
+        <p class="govuk-body">If delivery of the letter is taking longer than you'd expect, email us at
+          <a href="email">enquiries@companieshouse.gov.uk</a>.</p>
+        <p class="govuk-body">Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.</p>
 
-<h2 class="govuk-heading-m">What do you want to do next?</h2>
+        <h2 class="govuk-heading-m">What do you want to do next?</h2>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/print">Print this page for your records</a>
-        </li>
-        <li>
-          <a href="/sign-out">Sign out</a>
-        </li>
-      </ul>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="/print">Print this page for your records</a>
+          </li>
+          <li>
+            <a href="/sign-out">Sign out</a>
+          </li>
+        </ul>
 
-      <p class="govuk-body govuk-!-margin-top-7">
-      Help us to <a href="feedback">improve this service by completing our quick survey</a>.
-      </p>
+        <p class="govuk-body govuk-!-margin-top-7">
+          Help us to
+          <a href="feedback">improve this service by completing our quick survey</a>.
+        </p>
 
+      </div>
     </div>
-  </div>
 
-{% endblock %}
+  {% endblock %}
