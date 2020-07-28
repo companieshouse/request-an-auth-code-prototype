@@ -36,34 +36,59 @@
   text: "Due to the impact of coronavirus (COVID-19) it may take longer than usual for post to be delivered.",
   iconFallbackText: "Warning"
 }) }}
-
         <h2 class="govuk-heading-m">How to contact us</h2>
-        <p class="govuk-body">If delivery of the letter is taking longer than you'd expect, email us at
-          <a href="email">enquiries@companieshouse.gov.uk</a>.</p>
-        <p class="govuk-body">Our telephone contact centre is now closed to protect the welfare of our employees during the coronavirus (COVID-19) outbreak.</p>
+        <p class="govuk-body">If delivery of the letter is taking longer than you'd expect, contact us.
 
-        <h2 class="govuk-heading-m">What do you want to do next?</h2>
+          <h3 class="govuk-heading-s">By email</h3>
+          <ul class="govuk-list">
+            <li>
+              Email
+              <a href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a>
+            </li>
+          </ul>
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>
-            <a href="/print">Print this page for your records</a>
-          </li>
-          <li>
-            <a href="/sign-out">Sign out</a>
-          </li>
-        </ul>
+          <h3 class="govuk-heading-s">By phone</h3>
+          <ul class="govuk-list">
+            <li>
+              Telephone: 0303 1234 500
+            </li>
+            <li>
+              Telephone (Welsh language): 029 2038 0065
+            </li>
+            <li>
+              minicom or textphone 029 2022 6788
+            </li>
+            <li>
+              Monday to Friday 8.30am to 5pm
+            </li>
+            <li>
+              <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
+            </li>
 
-        {{ govukInsetText({
+          </ul>
+
+          <h2 class="govuk-heading-m">What do you want to do next?</h2>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="/print">Print this page for your records</a>
+            </li>
+            <li>
+              <a href="/sign-out">Sign out</a>
+            </li>
+          </ul>
+
+          {{ govukInsetText({
      html: " <h2 class='govuk-heading-m'>Follow a company</h2><p><a href='https://www.gov.uk/government/news/follow-companies-for-free'>Find out how to sign up to the Follow service</a>
      to receive an email alert when a company files with us.</p>"
      }) }}
 
-        <p class="govuk-body govuk-!-margin-top-7">
-          Help us to
-          <a href="feedback">improve this service by completing our quick survey</a>.
-        </p>
+          <p class="govuk-body govuk-!-margin-top-7">
+            Help us to
+            <a href="feedback">improve this service by completing our quick survey</a>.
+          </p>
 
+        </div>
       </div>
-    </div>
 
-  {% endblock %}
+    {% endblock %}
